@@ -51,7 +51,7 @@ const AvailableMedicines = ({ medicines: Medicines,deleteMedicine ,updateMedicin
       description={medicine.description}
       price={medicine.price}
       deleteHandler={ondelete}
-      editHandler={editHandler}
+      editHandler={editHandler }
     />
   ));
   return (
