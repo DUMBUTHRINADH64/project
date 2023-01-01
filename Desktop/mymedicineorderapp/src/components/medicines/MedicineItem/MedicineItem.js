@@ -26,8 +26,13 @@ const MedicineItem = (props) => {
 
         {authCtx.isLoggedIn && <MedicineForm onAddToCart={addToCartHandler}/>}
         {!authCtx.isLoggedIn && 
-        <div><button class="bg-secondary" >edit</button>
-        <button class='bg-danger'>delete</button></div>}
+        <div><button onClick={() => props.editHandler({
+                                              id:props.id,
+                                              name:props.name,
+                                              price: props.price,
+                                              description:props.description
+                                            })} class="bg-secondary" >edit</button>
+        <button onClick={() => props.deleteHandler(props.id)} class='bg-danger'>delete</button></div>}
       </div>
     </li>
   );

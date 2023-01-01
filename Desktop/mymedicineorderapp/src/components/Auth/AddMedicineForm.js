@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
+
 const AddMedicineForm = (props) => {
   const [medicineName, setMedicineName] = useState('');
   const [medicinedescription, setMedicineDescription] = useState('');
@@ -28,7 +30,7 @@ const AddMedicineForm = (props) => {
     //   price: 30.91,
     // },
     const data = {
-      id:'m7',
+      id:uuidv4(),
       name:medicineName,
       description:medicinedescription,
       price:price-0
