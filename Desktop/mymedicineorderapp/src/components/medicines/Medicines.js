@@ -14,7 +14,7 @@ color: white;
 border-radius: 14px;
 padding: 1rem;
 box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);`;
-const Medicines = () => {
+const Medicines = ({medicines}) => {
   return (
     <Fragment>
        <Container>
@@ -28,7 +28,7 @@ const Medicines = () => {
         All the medicines are recently manufactured,no expired medicines in the cart.
       </p>
     </Container>
-       <AvailableMedicines medicines={Mediciness} />
+       <AvailableMedicines medicines={medicines} />
     </Fragment>
   );
 };

@@ -31,21 +31,14 @@ const Medicines = [
   },
 ];
 
-const AdminDetails = () => {
+const AdminDetails = ({addMedicine,medicines,deleteMedicine,updateMedicine}) => {
 
-  const [medicines,setMedicines] = useState(Medicines);
-
-  const addMedicine = (medicine)=>{
-    const data= [...medicines];
-    data.push(medicine);
-    setMedicines(data);
-  }
 
   return (
     <div class="text-center">
       <br />
       <NewMedicine addMedicine={addMedicine}/>
-      <AvailableMedicines medicines={medicines}/>
+      <AvailableMedicines medicines={medicines} deleteMedicine={deleteMedicine} updateMedicine={updateMedicine} />
     </div>
   );
 };
